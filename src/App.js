@@ -19,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Blue Jays Broadcast Bingo</h1>
+        <Card boxes={events} />
       </div>
     );
   }
