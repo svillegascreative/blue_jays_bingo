@@ -4,12 +4,10 @@ import Box from './Box.js';
 
 class Card extends Component {
   render() {
-    
-    let gameBoxes = [
-      <Box text={this.props.boxes[0]} />,
-      <Box text={this.props.boxes[1]} />,
-      <Box text={this.props.boxes[2]} />
-    ];
+
+    let gameBoxes = this.props.boxes.map(
+      (text, index) => ( <Box text={text} key={index} /> )
+    );
 
     return (
       <div className="Card">
