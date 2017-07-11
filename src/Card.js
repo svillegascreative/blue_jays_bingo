@@ -9,9 +9,25 @@ class Card extends Component {
       (text, index) => ( <Box text={text} key={index} /> )
     );
 
+    const numberOfBoxes = 24;
+
+    const shuffleBoxes = (array) => {
+      let lastPlace = array.length;
+
+      for (let i = 0; i <= numberOfBoxes; i++) {
+        let random = Math.floor(Math.random() * lastPlace);
+        let temp = array[lastPlace];
+        array[lastPlace] = array[random];
+        array[random] = temp;
+        lastPlace -=1;
+      }
+
+      return array;
+    }
+
     return (
       <div className="Card">
-        {gameBoxes}
+        {shuffleBoxes(gameBoxes)}
       </div>
     );
   }
