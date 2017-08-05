@@ -1,0 +1,5 @@
+.Card {
+  margin: 0 auto;
+  max-width: 770px;
+  display: table;
+}

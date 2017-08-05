@@ -1,0 +1,10 @@
+.Box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ccc;
+  float: left;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
