@@ -9,7 +9,7 @@ class Card extends Component {
       (text, index) => ( <Box text={text} key={index} /> )
     );
 
-    const numberOfBoxes = 24;
+    const numberOfBoxes = 25;
 
     const shuffleBoxes = (array) => {
       let lastPlace = array.length;
@@ -22,7 +22,7 @@ class Card extends Component {
         lastPlace -=1;
       }
 
-      return array;
+      return array.slice(0, numberOfBoxes+1);
     }
 
     return (
